@@ -37,6 +37,8 @@ app.get('/get-stream', async (req, res) => {
         res.status(500).json({ error: "YouTube Erişimi Engelledi! Cookie yenilemeniz gerekebilir." });
     }
 });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("listening", PORT));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Sunucu aktif.`));
